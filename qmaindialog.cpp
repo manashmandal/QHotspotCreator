@@ -2,9 +2,9 @@
 #include "ui_qmaindialog.h"
 
 
- QString QMainDialog::startHotspotCommand = "/cnetsh wlan start hostednetwork";
- QString QMainDialog::stopHotspotCommand = "/cnetsh wlan stop hostednetwork";
- QString QMainDialog::cmd = "cmd.exe";
+QString QMainDialog::startHotspotCommand = "/cnetsh wlan start hostednetwork";
+QString QMainDialog::stopHotspotCommand = "/cnetsh wlan stop hostednetwork";
+QString QMainDialog::cmd = "cmd.exe";
 
 QMainDialog::QMainDialog(QWidget *parent) :
     QDialog(parent),

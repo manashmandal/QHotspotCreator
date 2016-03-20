@@ -38,7 +38,6 @@ private:
 
     static QString startHotspotCommand;
     static QString stopHotspotCommand;
-    static QString setConfigCommand;
     static QString cmd;
 };
 
