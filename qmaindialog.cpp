@@ -10,7 +10,7 @@ QMainDialog::QMainDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::QMainDialog),
     password("password"),
-    ssid("ChodonChodonKhela")
+    ssid("Hotspot")
 {
     ui->setupUi(this);
 }
