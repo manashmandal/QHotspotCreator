@@ -1,5 +1,8 @@
+![license_badge](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
+
 # Q Hotspot Creator
 
+![img](http://i.imgur.com/p7qEweC.png)
 
 ## What is it?
 It is an open source hotspot creator for `Windows` operating system.
