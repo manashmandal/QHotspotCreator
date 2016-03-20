@@ -10,9 +10,9 @@ Everyone wants to share their internet so they can use it on their mobile/other 
 
 ## LICENSE
 
-[wtfpl](http://www.wtfpl.net/wp-content/uploads/2012/12/logo-220x1601.png)
+![wtfpl](http://www.wtfpl.net/wp-content/uploads/2012/12/logo-220x1601.png)
 
-```      DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+```DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
                     Version 2, December 2004 
 
  Copyright (C) 2004 Sam Hocevar <sam@hocevar.net> 
