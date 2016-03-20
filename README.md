@@ -11,6 +11,11 @@ It is an open source hotspot creator for `Windows` operating system.
 
 Everyone wants to share their internet so they can use it on their mobile/other wifi enabled devices right? It is a simple and has minimalist design with only `Config`, `Start` and `Stop` Button. 
 
+## RELEASE
+
+[Download the `zip` file from here](https://github.com/manashmndl/QHotspotCreator/releases/tag/1.0.0)
+
+
 ## LICENSE
 
 ![wtfpl](http://www.wtfpl.net/wp-content/uploads/2012/12/logo-220x1601.png)
