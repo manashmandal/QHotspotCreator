@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/icon/appicon">
+        <file>wifi_icon.svg</file>
+    </qresource>
+</RCC>

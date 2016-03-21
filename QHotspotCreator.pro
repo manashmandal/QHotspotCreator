@@ -19,3 +19,6 @@ HEADERS  += qmaindialog.h
 
 FORMS    += qmaindialog.ui
 
+RESOURCES += \
+    appresource.qrc
+

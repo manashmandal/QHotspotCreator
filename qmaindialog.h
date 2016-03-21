@@ -14,7 +14,7 @@
 #include <QMessageBox>
 
 #define MIN_KEY_LENGTH 8
-
+#define MAX_KEY_LENGTH 32
 
 namespace Ui {
 class QMainDialog;
