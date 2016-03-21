@@ -115,7 +115,7 @@ void QMainDialog::enableStopButton(bool enable)
 
 bool QMainDialog::checkKeyLength()
 {
-    return (ui->passwordLineEdit->text().length() > MIN_KEY_LENGTH);
+    return (ui->passwordLineEdit->text().length() >= MIN_KEY_LENGTH);
 }
 
 bool QMainDialog::isKeyEmpty()
