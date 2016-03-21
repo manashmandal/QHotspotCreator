@@ -22,3 +22,4 @@ FORMS    += qmaindialog.ui
 RESOURCES += \
     appresource.qrc
 
+RC_FILE = qwifihotspot.rc
