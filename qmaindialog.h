@@ -25,15 +25,18 @@ public:
     ~QMainDialog();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_startButton_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_stopButton_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_setConfigButton_clicked();
 
 private:
     void loadConfiguration(void);
     void saveConfiguration(void);
+
+    void enableStartButton(bool enable);
+    void enableStopButton(bool enable);
 
 private:
     Ui::QMainDialog *ui;

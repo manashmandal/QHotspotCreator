@@ -29,6 +29,7 @@ QMainDialog::QMainDialog(QWidget *parent) :
 
     ui->setupUi(this);
     this->loadConfiguration();
+    this->enableStartButton(true);
 }
 
 QMainDialog::~QMainDialog()
@@ -36,8 +37,9 @@ QMainDialog::~QMainDialog()
     delete ui;
 }
 
-void QMainDialog::on_pushButton_clicked()
+void QMainDialog::on_startButton_clicked()
 {
+    this->enableStartButton(false);
     hotspotCreatorProcess.start(QMainDialog::CMD, QStringList() << QMainDialog::START_HOTSPOT, QProcess::ReadWrite);
 }
 
@@ -67,20 +69,33 @@ void QMainDialog::loadConfiguration()
 }
 
 
-void QMainDialog::on_pushButton_2_clicked()
+void QMainDialog::on_stopButton_clicked()
 {
+    this->enableStartButton(true);
     hotspotCreatorProcess.start(QMainDialog::CMD, QStringList() << QMainDialog::STOP_HOTSPOT, QProcess::ReadWrite);
 }
 
 
 
-void QMainDialog::on_pushButton_3_clicked()
+void QMainDialog::on_setConfigButton_clicked()
 {
     this->saveConfiguration();
     QString _ssid = ui->ssidLineEdit->text();
     QString _pass = ui->passwordLineEdit->text();
     QString configComm = "/cnetsh wlan set hostednetwork ssid=" + _ssid + " key=" + _pass;
     hotspotCreatorProcess.start(QMainDialog::CMD, QStringList() << configComm, QProcess::ReadWrite);
+}
+
+void QMainDialog::enableStartButton(bool enable)
+{
+    ui->startButton->setEnabled(enable);
+    ui->stopButton->setEnabled(!enable);
+}
+
+void QMainDialog::enableStopButton(bool enable)
+{
+    ui->stopButton->setEnabled(enable);
+    ui->startButton->setEnabled(!enable);
 }
 
 
@@ -93,6 +108,7 @@ void saveSettings(const QString &key, const QVariant &value, const QString &grou
     settings.endGroup();
 }
 
+//Load settings
 QVariant loadSettings(const QString &key, const QString &group, const QVariant &defaultValue = QVariant())
 {
     QSettings settings;
