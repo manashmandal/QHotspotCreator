@@ -1,5 +1,7 @@
 ![license_badge](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
 
+![svg](https://upload.wikimedia.org/wikipedia/commons/1/19/Visual_Studio_2012_logo_and_wordmark.svg)
+
 # Q Hotspot Creator
 
 ![img](http://i.imgur.com/p7qEweC.png)
