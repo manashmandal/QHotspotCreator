@@ -1,6 +1,6 @@
 ![license_badge](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
 
-![svg](https://raw.githubusercontent.com/manashmndl/QHotspotCreator/master/Icons/qhotspoticon.png)
+![svg](https://github.com/manashmndl/QHotspotCreator/blob/master/Icons/qhotspot.ico)
 
 # Q Hotspot Creator
 
