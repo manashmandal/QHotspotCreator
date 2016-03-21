@@ -11,6 +11,10 @@
 #include <QString>
 #include <QStringList>
 #include <QSettings>
+#include <QMessageBox>
+
+#define MIN_KEY_LENGTH 8
+
 
 namespace Ui {
 class QMainDialog;
@@ -26,9 +30,7 @@ public:
 
 private slots:
     void on_startButton_clicked();
-
     void on_stopButton_clicked();
-
     void on_setConfigButton_clicked();
 
 private:
@@ -37,6 +39,12 @@ private:
 
     void enableStartButton(bool enable);
     void enableStopButton(bool enable);
+
+    //Checker function
+    bool checkKeyLength(void);
+    bool isKeyEmpty(void);
+    bool isSSIDEmpty(void);
+
 
 private:
     Ui::QMainDialog *ui;

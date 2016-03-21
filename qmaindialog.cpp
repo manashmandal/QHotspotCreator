@@ -30,6 +30,7 @@ QMainDialog::QMainDialog(QWidget *parent) :
     ui->setupUi(this);
     this->loadConfiguration();
     this->enableStartButton(true);
+
 }
 
 QMainDialog::~QMainDialog()
@@ -39,8 +40,14 @@ QMainDialog::~QMainDialog()
 
 void QMainDialog::on_startButton_clicked()
 {
-    this->enableStartButton(false);
-    hotspotCreatorProcess.start(QMainDialog::CMD, QStringList() << QMainDialog::START_HOTSPOT, QProcess::ReadWrite);
+    if (checkKeyLength() && !isSSIDEmpty()){
+        this->enableStartButton(false);
+        hotspotCreatorProcess.start(QMainDialog::CMD, QStringList() << QMainDialog::START_HOTSPOT, QProcess::ReadWrite);
+    } else {
+        if (!checkKeyLength() && !isSSIDEmpty()) QMessageBox::warning(this, "Password length is too short", "Password must be of length 8 character");
+        else if (checkKeyLength() && isSSIDEmpty()) QMessageBox::warning(this, "Enter Hotspot SSID", "Please enter hotspot name, can't keep it empty!");
+        else if (!checkKeyLength() && isSSIDEmpty()) QMessageBox::warning(this, "Required field empty", "Hotspot name field is empy and password length is less than required");
+    }
 }
 
 
@@ -79,12 +86,20 @@ void QMainDialog::on_stopButton_clicked()
 
 void QMainDialog::on_setConfigButton_clicked()
 {
-    this->saveConfiguration();
-    QString _ssid = ui->ssidLineEdit->text();
-    QString _pass = ui->passwordLineEdit->text();
-    QString configComm = "/cnetsh wlan set hostednetwork ssid=" + _ssid + " key=" + _pass;
-    hotspotCreatorProcess.start(QMainDialog::CMD, QStringList() << configComm, QProcess::ReadWrite);
+    if (checkKeyLength() && !isSSIDEmpty()){
+        this->saveConfiguration();
+        QString _ssid = ui->ssidLineEdit->text();
+        QString _pass = ui->passwordLineEdit->text();
+        QString configComm = "/cnetsh wlan set hostednetwork ssid=" + _ssid + " key=" + _pass;
+        hotspotCreatorProcess.start(QMainDialog::CMD, QStringList() << configComm, QProcess::ReadWrite);
+    } else {
+        if (!checkKeyLength() && !isSSIDEmpty()) QMessageBox::warning(this, "Password length is too short", "Password must be of length 8 character");
+        else if (checkKeyLength() && isSSIDEmpty()) QMessageBox::warning(this, "Enter Hotspot SSID", "Please enter hotspot name, can't keep it empty!");
+        else if (!checkKeyLength() && isSSIDEmpty()) QMessageBox::warning(this, "Required field empty", "Hotspot name field is empy and password length is less than required");
+    }
 }
+
+
 
 void QMainDialog::enableStartButton(bool enable)
 {
@@ -98,6 +113,20 @@ void QMainDialog::enableStopButton(bool enable)
     ui->startButton->setEnabled(!enable);
 }
 
+bool QMainDialog::checkKeyLength()
+{
+    return (ui->passwordLineEdit->text().length() > MIN_KEY_LENGTH);
+}
+
+bool QMainDialog::isKeyEmpty()
+{
+    return (ui->passwordLineEdit->text() == NULL);
+}
+
+bool QMainDialog::isSSIDEmpty()
+{
+    return (ui->ssidLineEdit->text() == NULL);
+}
 
 //Save settings
 void saveSettings(const QString &key, const QVariant &value, const QString &group)
