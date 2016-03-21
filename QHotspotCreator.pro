@@ -19,7 +19,11 @@ HEADERS  += qmaindialog.h
 
 FORMS    += qmaindialog.ui
 
-RESOURCES += \
-    appresource.qrc
 
-RC_FILE = qwifihotspot.rc
+
+
+#Windows admin right
+win32 {
+    RC_FILE = QHotspotCreator.rc
+}
+
