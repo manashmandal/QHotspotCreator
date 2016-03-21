@@ -10,13 +10,13 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="109.2835mm"
-   height="109.28456mm"
-   viewBox="0 0 387.225 387.22876"
+   width="494.71469mm"
+   height="494.71948mm"
+   viewBox="0 0 1752.9261 1752.943"
    id="svg4249"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="wifi_icon.svg">
+   sodipodi:docname="qhotspoticon.svg">
   <defs
      id="defs4251">
     <linearGradient
@@ -87,9 +87,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-247.10178"
-     inkscape:cy="127.90012"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="1823.4653"
+     inkscape:cy="503.41424"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -118,9 +118,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-200.67321,-273.03358)">
+     transform="translate(482.17729,409.82358)">
     <g
-       id="g4895">
+       id="g4895"
+       transform="matrix(4.5268928,0,0,4.5268928,-1390.6034,-1645.8173)">
       <g
          transform="matrix(1.25,0,0,-1.25,-97.80854,1010.7487)"
          id="g4412">
