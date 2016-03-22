@@ -31,8 +31,7 @@ Everyone wants to share their internet so they can use it on their mobile/other 
 
 ## RELEASE
 
-[Download the `zip` file from here](https://github.com/manashmndl/QHotspotCreator/releases/tag/1.0.0)
-
+[Download the `zip` file from here](https://github.com/manashmndl/QHotspotCreator/releases/tag/1.1.0)
 
 ## LICENSE
 
