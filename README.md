@@ -1,10 +1,26 @@
 ![license_badge](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
 
-![svg](https://github.com/manashmndl/QHotspotCreator/blob/master/Icons/qhotspot.ico)
+![ico](https://github.com/manashmndl/QHotspotCreator/blob/master/Icons/qhotspot.ico)
 
 # Q Hotspot Creator
 
-![img](http://i.imgur.com/p7qEweC.png)
+### Configuring Hotspot
+
+![config](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/config.png)
+
+### Starting Hotspot
+
+![start](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/start.png)
+
+### Working
+
+![working](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/Screenshot_2016-03-22-14-40-05.png)
+
+### Stopping Hotspot
+
+![stop](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/stop.png)
+
+
 
 ## What is it?
 It is an open source hotspot creator for `Windows` operating system.
