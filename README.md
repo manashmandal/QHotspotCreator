@@ -4,6 +4,15 @@
 
 # Q Hotspot Creator
 
+
+## What is it?
+It is an open source hotspot creator for `Windows` operating system.
+
+## Oh God, why another one?
+
+Everyone wants to share their internet so they can use it on their mobile/other wifi enabled devices right? It is a simple and has minimalist design with only `Config`, `Start` and `Stop` Button. 
+
+
 ### Intro
 
 #### Configuring Hotspot
@@ -42,14 +51,7 @@
 
 #### Voila, you only have to do this once!
 
-## What is it?
-It is an open source hotspot creator for `Windows` operating system.
-
-## Oh God, why another one?
-
-Everyone wants to share their internet so they can use it on their mobile/other wifi enabled devices right? It is a simple and has minimalist design with only `Config`, `Start` and `Stop` Button. 
-
-## RELEASE
+## RELEASE / DOWNLOAD
 
 [Download the `zip` file from here](https://github.com/manashmndl/QHotspotCreator/releases/tag/1.1.0)
 
