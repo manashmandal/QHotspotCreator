@@ -31,6 +31,9 @@ QMainDialog::QMainDialog(QWidget *parent) :
     this->loadConfiguration();
     this->enableStartButton(true);
 
+    //Connecting process with the output
+    connect(&hotspotCreatorProcess, SIGNAL(readyReadStandardOutput()), this, SLOT(readyForOutput()));
+
 }
 
 QMainDialog::~QMainDialog()
@@ -145,4 +148,14 @@ QVariant loadSettings(const QString &key, const QString &group, const QVariant &
     QVariant data = settings.value(key, defaultValue);
     settings.endGroup();
     return data;
+}
+
+
+//Read output from cmd
+void QMainDialog::readyForOutput(void){
+    standardOutput = hotspotCreatorProcess.readAllStandardOutput();
+    qDebug() << standardOutput;
+    if (standardOutput.contains("network stopped")) ui->statusLabel->setText("Hotspot stopped!");
+    else if (standardOutput.contains("network started")) ui->statusLabel->setText("Hotspot Started");
+    else if (standardOutput.contains("SSID of the hosted network has been successfully changed")) ui->statusLabel->setText("Hotspot was configured successfully");
 }

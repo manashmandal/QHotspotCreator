@@ -64,6 +64,11 @@ private:
 
     static const QString DEFAULT_SSID;
     static const QString DEFAULT_KEY;
+
+    QString standardOutput;
+
+public slots:
+    void readyForOutput(void);
 };
 
 
