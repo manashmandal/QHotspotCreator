@@ -4,23 +4,43 @@
 
 # Q Hotspot Creator
 
-### Configuring Hotspot
+### Intro
+
+#### Configuring Hotspot
 
 ![config](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/config.png)
 
-### Starting Hotspot
+#### Starting Hotspot
 
 ![start](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/start.png)
 
-### Working
+#### Working
 
 ![working](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/Screenshot_2016-03-22-14-40-05.png)
 
-### Stopping Hotspot
+#### Stopping Hotspot
 
 ![stop](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/stop.png)
 
+## How to Configure?
 
+* Go to `Network and Sharing Center`
+
+![howto1](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/howto1.png)
+
+* Click `Change Adapter Settings`
+
+![howto2](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/howto2.png)
+
+* Open properties of the adapter from where you want to share your internet
+
+![howto3](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/howto3.png)
+
+* Go to `Sharing` Tab and set your Wifi Adapter as the internet sharing medium
+
+![howto4](https://github.com/manashmndl/QHotspotCreator/blob/master/screenshots/howto4.png)
+
+#### Voila, you only have to do this once!
 
 ## What is it?
 It is an open source hotspot creator for `Windows` operating system.
