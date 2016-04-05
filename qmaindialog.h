@@ -90,6 +90,13 @@ private:
     static const QString DEFAULT_SSID;
     static const QString DEFAULT_KEY;
 
+    //Save hotspot status
+    static const QString HOTSPOT_STATUS_GROUP;
+    static const QString STATUS_KEY;
+    static QString STATUS_VALUE;
+    static const QString STATUS_DEFAULT_VALUE;
+
+
     QString standardOutput;
 
 public slots:

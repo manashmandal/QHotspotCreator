@@ -41,6 +41,11 @@ const QString QMainDialog::GROUP = "hotspot_config";
 const QString QMainDialog::DEFAULT_KEY = "password";
 const QString QMainDialog::DEFAULT_SSID = "Hotspot";
 
+const QString QMainDialog::STATUS_DEFAULT_VALUE = "off";
+const QString QMainDialog::STATUS_KEY = "hotspot_status";
+QString QMainDialog::STATUS_VALUE = "off";
+const QString QMainDialog::HOTSPOT_STATUS_GROUP = "on_off_status";
+
 QMainDialog::QMainDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::QMainDialog),
@@ -58,16 +63,28 @@ QMainDialog::QMainDialog(QWidget *parent) :
     //Connecting process with the output
     connect(&hotspotCreatorProcess, SIGNAL(readyReadStandardOutput()), this, SLOT(readyForOutput()));
 
+    QString buttonStatus = loadSettings(QMainDialog::STATUS_KEY, QMainDialog::HOTSPOT_STATUS_GROUP, QMainDialog::STATUS_DEFAULT_VALUE).toString ();
+
+    if (buttonStatus == "on"){
+        this->enableStartButton (false);
+        ui->statusLabel->setText ("Hotspot already started!");
+    } else {
+        this->enableStartButton (true);
+        ui->statusLabel->setText ("Hotspot stopped!");
+    }
+
 }
 
 QMainDialog::~QMainDialog()
 {
+    saveSettings (QMainDialog::STATUS_KEY, QMainDialog::STATUS_VALUE, QMainDialog::HOTSPOT_STATUS_GROUP);
     delete ui;
 }
 
 void QMainDialog::on_startButton_clicked()
 {
     if (checkKeyLength() && !isSSIDEmpty()){
+        QMainDialog::STATUS_VALUE = "on";
         this->enableStartButton(false);
         hotspotCreatorProcess.start(QMainDialog::CMD, QStringList() << QMainDialog::START_HOTSPOT, QProcess::ReadWrite);
     } else {
@@ -105,6 +122,7 @@ void QMainDialog::loadConfiguration()
 
 void QMainDialog::on_stopButton_clicked()
 {
+    QMainDialog::STATUS_VALUE = "off";
     this->enableStartButton(true);
     hotspotCreatorProcess.start(QMainDialog::CMD, QStringList() << QMainDialog::STOP_HOTSPOT, QProcess::ReadWrite);
 }
